@@ -1,7 +1,6 @@
 message('Loading Packages')
 library(rvest)
 library(tidyverse)
-library(tmaptools)
 library(mongolite)
 
 #kelas
