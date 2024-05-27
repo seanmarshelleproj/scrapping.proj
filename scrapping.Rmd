@@ -1,0 +1,147 @@
+---
+title: "scrapping"
+output: html_document
+date: "2024-05-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+message('Loading Packages')
+library(rvest)
+library(tidyverse)
+library(tmaptools)
+library(mongolite)
+```
+
+#FITHUB
+```{r}
+#kelas
+message('Scraping Data')
+link <- "https://fithub.id/class"
+page <- read_html(link)
+kategori <- page %>% html_nodes(".CardClass_card-category-wrapper__bGTwA p") %>% 
+  html_text()
+kelas <- page %>% html_nodes(".CardClass_card-class-content__bmYWa h2") %>% 
+  html_text()
+tingkat <- page %>% html_nodes(".CardClass_card-class-diffulty__gbWBu") %>% 
+  html_text()
+if(length(tingkat) < 21) {
+   tingkat <- c(tingkat, "easy")
+}
+tingkat[11] <- "EASY"
+tingkat[20] <- "MODERATE"
+tingkat[21] <- "EASY"
+waktu <- page %>% html_nodes(".small") %>% 
+  html_text()
+waktu[21] <- "60 MIN"
+waktu <- as.integer(gsub(" MIN", "", waktu))
+#menggabungkan jadi 1 df
+kelas_fithub <- data.frame(kategori, kelas, tingkat, waktu, stringsAsFactors = TRUE)
+print(kelas_fithub)
+```
+
+```{r}
+#membership
+link <- "https://fithub.id/membership"
+page <- read_html(link)
+lama_waktu <- page %>% html_nodes(".CardPackage_card-month-wrapper__Q3tz_") %>%
+  html_text()
+harga <- page %>% html_nodes(".small") %>%
+  html_text()
+benefit <- page %>% html_nodes(".CardPackage_card-benefit-list__CX4_e") %>%
+  html_text()
+#memisahkan data harga
+#harga/bulan
+harga_per_bulan <- harga[seq(1, length(harga), by = 3)]
+harga_per_bulan <- gsub("Rp", "", harga_per_bulan)
+harga_per_bulan <- gsub("/ bulan", "", harga_per_bulan)
+harga_per_bulan <- gsub("\\.", "", harga_per_bulan)
+harga_per_bulan <- as.integer(harga_per_bulan)
+#harga.tahub
+harga_pertahun <- harga[seq(2, length(harga), by = 3)]
+harga_pertahun <- gsub("Total Harga Rp", "", harga_pertahun)
+harga_pertahun <- gsub("\\.", "", harga_pertahun)
+harga_pertahun <- as.integer(harga_pertahun)
+#harga normal/tahun
+harga_sebelum_diskon <- harga[seq(3, length(harga), by = 3)]
+harga_sebelum_diskon <- gsub("Rp", "", harga_sebelum_diskon)
+harga_sebelum_diskon <- gsub("\\.", "", harga_sebelum_diskon)
+harga_sebelum_diskon <- as.integer(harga_sebelum_diskon)
+df_harga <- data.frame(harga_per_bulan, harga_pertahun, harga_sebelum_diskon, stringsAsFactors = FALSE)
+#memisahkan data benefit
+benefit_1 <- sapply(strsplit(benefit, "Gratis kelas"), `[`, 1)
+benefit_2 <- paste("Gratis kelas", sapply(strsplit(sapply(strsplit(benefit, "Gratis kelas"), `[`, 2), "Gratis"), `[`, 1))
+benefit_3 <- paste("Gratis", sapply(strsplit(sapply(strsplit(benefit, "Gratis kelas"), `[`, 2), "Gratis"), `[`, 2))
+benefit_3[5] <- "Tidak ada free Personal Training"
+df_benefit <- data.frame(benefit_1, benefit_2, benefit_3, stringsAsFactors = FALSE)
+#menggabungkan menjadi 1 df
+harga_fithub <- data.frame(lama_waktu, df_harga, df_benefit, stringsAsFactors = TRUE)
+print(harga_fithub)
+```
+
+```{r}
+#trainer
+link <- "https://fithub.id/trainer"
+page <- read_html(link)
+sesi <- page %>% html_nodes(".CardPTPackage_card-month-wrapper__4VKAK") %>%
+  html_text()
+harga_total_sesi <- page %>% html_nodes(".mb-1") %>%
+  html_text()
+harga_persesi <- page %>% html_nodes(".CardPTPackage_card-price__mJVie") %>%
+  html_text()
+#menghilangkan kata sesi
+sesi <- gsub("Sesi", "", sesi)
+#menghilangkan Rp pada harga_total_sesi
+harga_total_sesi <- gsub("Rp", "", harga_total_sesi)
+harga_total_sesi <- gsub("\\.", "", harga_total_sesi)
+harga_total_sesi <- as.integer(harga_total_sesi)
+#menghilangkan Rp pada harga_persesi
+harga_persesi <- gsub("Rp", "", harga_persesi)
+harga_persesi <- gsub("\\.", "", harga_persesi)
+harga_persesi <- as.integer(harga_persesi)
+#menggabungkan df
+trainer_fithub <- data.frame(sesi, harga_total_sesi, harga_persesi, stringsAsFactors = TRUE)
+print(trainer_fithub)
+```
+
+```{r}
+#lokasi
+link <- "https://fithub.id/location"
+page <- read_html(link)
+klub <- page %>% html_nodes(".locationCard_location-card-clubname__wPkYp") %>%
+  html_text()
+alamat_klub <-  page %>% html_nodes(".locationCard_location-card-desc__bAS2a p") %>%
+  html_text()
+#menggabungkan df
+alamat_fithub <- data.frame(klub, alamat_klub, stringsAsFactors = FALSE)
+print(alamat_fithub)
+```
+
+```{r}
+#fasilitas
+link <- "https://fithub.id/facilities"
+page <- read_html(link)
+fasilitas <- page %>% html_nodes(".section h4") %>%
+  html_text()
+fasilitas
+```
+#MONGODB
+```{r}
+message('Input Data to MongoDB Atlas')
+atlas_conn <- mongo(
+  collection = Sys.getenv("ATLAS_COLLECTION"),
+  db         = Sys.getenv("ATLAS_DB"),
+  url        = Sys.getenv("ATLAS_URL")
+)
+
+atlas_conn$insert(kelas_fithub)
+rm(atlas_conn)
+```
+
+
+
+
+
