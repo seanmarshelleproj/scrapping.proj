@@ -14,6 +14,6 @@ Gym adalah sarana atau sasana olahraga yang digunakan untuk kegiatan senam atau 
 <p align="justify">
 Gym yang sayang lakukan scrapping ini merupakan kategori premium gym dengan fasilitas peralatan dan kelas yang lengkap dengan harga yang terjangkau untuk dikelasnya. Harga, kelas, fasilitas, dan lokasi sudah saya lakukan scrapping pada data scrapping.Rmd. Data kelas gym saya simpan pada database MongoDB. Gym yang saya lakukan scrapping adalah FitHub yang dapat dicek pada website berikut: https://fithub.id/ ,dimana website ini menampilkan informasi yang sangat lengkap mengenai jasa dan produk yang mereka tawarkan.
 
-<p align="center" width="10%">
-    <img width="10%" src="https://fithub-webs.web.app/static/media/fithub-logo-square.5b8e5d19f34833be3901.png">
+<p align="center" width="30%">
+    <img width="30%" src="https://fithub-webs.web.app/static/media/fithub-logo-square.5b8e5d19f34833be3901.png">
 </p>
