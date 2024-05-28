@@ -33,12 +33,7 @@ Berikut merupakan hasil scrapping dari lokasi dan alamat FitHub yang ada di Indo
 <p align="justify">
 Berikut merupakan hasil scrapping dari harga dan benefit yang didapatkan:
 </p>
-<p align="justify">
-| Lama Waktu (Bulan) | Harga/Bulan    | Harga/Tahun   |
-|:-------------------|:---------------|:--------------|
-| 24                 | Rp. 311,250    | Rp. 5,976,000 |
-| 18                 | Rp. 323,750    | Rp. 4,662,000 |
-| 12                 | Rp. 343,750    | Rp. 3,300,000 |
-| 6                  | Rp. 406,250 	  | Rp. 1,950,000 |
-| 3                  | Rp. 481,250	  | Rp. 1,155,000 |
+<p align="center" width="100%">
+    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%20142128.png">
 </p>
+
