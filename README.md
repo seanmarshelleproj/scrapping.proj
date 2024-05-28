@@ -78,6 +78,7 @@ Berikut merupakan contoh dokumen pada MongoDB untuk kelas gym:
 ```
 ## 🖥️: **Syntax**
 Berikut merupakan syntax yang digunakan untuk scrapping dengan R:
+https://rpubs.com/SeanMarshelle/scrapping
 
 ## 👱: **Pengembang**
 ** Sean Marshelle (G1501231012)**
