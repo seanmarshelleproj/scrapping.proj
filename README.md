@@ -34,6 +34,14 @@ Berikut merupakan hasil scrapping dari lokasi dan alamat FitHub yang ada di Indo
 Berikut merupakan hasil scrapping dari harga dan benefit yang didapatkan:
 </p>
 <p align="center" width="100%">
-    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%20142128.png">
+    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%145006.png">
+</p>
+
+## 🧎: **Harga Trainer**
+<p align="justify">
+Berikut merupakan hasil scrapping dari harga trainer yang didapatkan:
+</p>
+<p align="center" width="100%">
+    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%145032.png">
 </p>
 
