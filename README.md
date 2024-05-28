@@ -34,7 +34,7 @@ Berikut merupakan hasil scrapping dari lokasi dan alamat FitHub yang ada di Indo
 Berikut merupakan hasil scrapping dari harga dan benefit yang didapatkan:
 </p>
 <p align="center" width="100%">
-    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%145006.png">
+    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%20145006.png">
 </p>
 
 ## 🧎: **Harga Trainer**
@@ -42,6 +42,43 @@ Berikut merupakan hasil scrapping dari harga dan benefit yang didapatkan:
 Berikut merupakan hasil scrapping dari harga trainer yang didapatkan:
 </p>
 <p align="center" width="100%">
-    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%145032.png">
+    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%20145032.png">
 </p>
+
+## 🎰: **Fasilitas**
+Berikut merupakan hasil scrapping mengenai fasilitas yang didapatkan:
+| Fasilitas         |
+|:------------------|
+| Cardio            |
+| Class Area        |
+| Personal Trainer  |
+| Weight Training   |
+| Dumbell Area      | 
+| Matras            |
+| Waiting Room      | 
+| Charging          |
+| Free Weights      |
+| Locker            |
+| Shower Room       |
+| Toilet            |
+| Ripstick          |
+| Changing Room     |
+
+
+## 📋: **Dokumen**
+Berikut merupakan contoh dokumen pada MongoDB untuk kelas gym:
+```
+    {
+    "_id":{"$oid":"665486b1c05bab1f970a1d31"},
+    "kategori":"Strength Classes",
+    "kelas":"HIIT",
+    "tingkat":"MODERATE",
+    "waktu":{"$numberInt":"60"}
+    }
+```
+## 🖥️: **Syntax**
+Berikut merupakan syntax yang digunakan untuk scrapping dengan R:
+
+## 👱: **Pengembang**
+** Sean Marshelle (G1501231012)**
 
