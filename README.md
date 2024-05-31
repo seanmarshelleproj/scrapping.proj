@@ -18,8 +18,7 @@ Gym yang sayang lakukan scrapping ini merupakan kategori premium gym dengan fasi
     <img width="30%" src="https://fithub-webs.web.app/static/media/fithub-logo-square.5b8e5d19f34833be3901.png">
 </p>
 
-## 🗺️: **Lokasi**
-<p align="justify">
+## 🗺🏛️: **Kelas**
 Berikut merupakan hasil scrapping dari lokasi dan alamat FitHub yang ada di Indonesia:
 </p>
 <p align="center" width="100%">
