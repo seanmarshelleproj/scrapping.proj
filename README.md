@@ -68,13 +68,9 @@ Berikut merupakan hasil scrapping mengenai fasilitas yang didapatkan:
 ## 📋: **Dokumen**
 Berikut merupakan contoh dokumen pada MongoDB untuk kelas gym:
 ```
-    {
-    "_id":{"$oid":"665486b1c05bab1f970a1d31"},
-    "kategori":"Strength Classes",
-    "kelas":"HIIT",
-    "tingkat":"MODERATE",
-    "waktu":{"$numberInt":"60"}
-    }
+   {"_id":{"$oid":"665981a5a90816df44073d91"},
+    "klub":"FIT HUB BALOI PERSERO BATAM (Coming Soon)",
+    "alamat_klub":"Jl. Bunga Raya No.37-38 A, Baloi Kusuma, Kec. Lubuk Baja, Kota Batam, Kepulauan Riau 29444"}
 ```
 ## 🖥️: **Syntax**
 Berikut merupakan syntax yang digunakan untuk scrapping dengan R:
