@@ -66,7 +66,7 @@ Berikut merupakan hasil scrapping mengenai fasilitas yang didapatkan:
 
 
 ## 📋: **Dokumen**
-Berikut merupakan contoh dokumen pada MongoDB untuk kelas gym:
+Berikut merupakan contoh dokumen pada MongoDB untuk alamat gym:
 ```
    {"_id":{"$oid":"665981a5a90816df44073d91"},
     "klub":"FIT HUB BALOI PERSERO BATAM (Coming Soon)",
