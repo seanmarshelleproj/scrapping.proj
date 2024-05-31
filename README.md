@@ -19,14 +19,31 @@ Gym yang sayang lakukan scrapping ini merupakan kategori premium gym dengan fasi
 </p>
 
 ## 🗺🏛️: **Kelas**
-Berikut merupakan hasil scrapping dari lokasi dan alamat FitHub yang ada di Indonesia:
-</p>
-<p align="center" width="100%">
-    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%20142128.png">
-</p>
-<p align="center" width="100%">
-    <img width="100%" src="https://raw.githubusercontent.com/seanmarshelleproj/scrapping.proj/main/scrapping%20image/Screenshot%202024-05-28%20142046.png">
-</p>
+Berikut merupakan hasil scrapping dari kelas FitHub yang ada disediakan:
+| Kategori          | Kelas                 | Tingkat     | Waktu       |
+|:------------------|:----------------------|:------------|:------------|
+| Strength Classes  | HIIT                  | MODERATE    | 60 menit    |
+| Strength Classes  | CORE                  | MODERATE    | 60 menit    |
+| Strength Classes  | CIRCUIT               | MODERATE    | 60 menit    |
+| Strength Classes  | BODY SHAPING          | MODERATE    | 60 menit    | 
+| Strength Classes  | BOOTCAMP              | MODERATE    | 60 menit    |
+| Cardio Classes    | BODY COMBAT           | MODERATE    | 60 menit    |
+| Cardio Classes    | STRONG NATION         | MODERATE    | 60 menit    |
+| Cardio Classes    | FIT CYCLE             | MODERATE    | 60 menit    |
+| Cardio Classes    | MAT PILATES           | MODERATE    | 60 menit    |
+| Cardio Classes    | FIT RUSH              | MODERATE    | 60 menit    |
+| Cardio Classes    | POUND FIT             | MODERATE    | 60 menit    |
+| Cardio Classes    | PILOXING              | EASY        | 60 menit    |
+| Dance Classes     | HIP HOP DANCE         | EASY        | 60 menit    |
+| Dance Classes     | FREESTYLE DANCE       | MODERATE    | 60 menit    |
+| Dance Classes     | CARDIO DANCE          | MODERATE    | 60 menit    |
+| Dance Classes     | BELLY DANCE           | MODERATE    | 60 menit    |
+| Mind&Body Classes | VINYASA YOGA          | MODERATE    | 60 menit    |
+| Mind&Body Classes | KAPHA YOGA            | MODERATE    | 60 menit    |
+| Mind&Body Classes | LADIES STYLE BACHATA  | MODERATE    | 60 menit    |
+| Mind&Body Classes | THAI BOXING           | MODERATE    | 60 menit    |
+| Mind&Body Classes | ZUMBA                 | MODERATE    | 60 menit    |
+
 
 ## 💰: **Harga**
 <p align="justify">
