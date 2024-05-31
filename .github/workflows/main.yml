@@ -1,4 +1,4 @@
-name: scrape_gym_class
+name: scrape_gym_address
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     
 jobs:
-  class-scrape:
+  alamat-scrape:
     runs-on: macOS-latest
     env:
       ATLAS_URL: ${{ secrets.ATLAS_URL }}
@@ -23,5 +23,5 @@ jobs:
         install.packages("tidyverse", dependencies = TRUE)
         install.packages("mongolite")
       shell: Rscript {0} 
-    - name: Scrape Data Kelas Gym
-      run: Rscript kelas_gym.R
+    - name: Scrape Alamat Gym
+      run: Rscript alamat_gym.R
