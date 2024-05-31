@@ -23,5 +23,5 @@ atlas_conn <- mongo(
   url        = Sys.getenv("ATLAS_URL")
 )
 
-atlas_conn$insert(kelas_fithub)
+atlas_conn$insert(data_alamat)
 rm(atlas_conn)
